@@ -1,2 +1,25 @@
 using System.Data;
 using System.Data.SqlClient;
+
+public partial class LLCKit:System.UI.Web.Page
+{
+{
+public string CmpID
+ get
+        {
+            if (ViewState["CmpID"] != null)
+            {
+                return ViewState["CmpID"].ToString();
+            }
+            else
+            {
+                return "0";
+            }
+        }
+
+        set
+        {
+            ViewState["CmpID"] = value;
+        }
+}
+}
